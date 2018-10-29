@@ -10,14 +10,24 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSMutableArray * sportsILike = [[NSMutableArray alloc] initWithObjects:@"basketball", @"chess", @"star craft", @"soccer", @"tennis", @"surfing",@"kayaking", nil ];
+        NSDictionary * sportsILike = @{
+                                       @"bascket ball":@"🏀",
+                                       @"golf":@"⛳️",
+                                       @"tennis":@"🎾",
+                                       @"surfing":@"🏄🏿‍♀️",
+                                       @"karate":@"🥋",
+                                       @"street fighting":@"🤼‍♂️",
+                                       @"oylimic lifting":@"🏋🏿‍♂️"
+                                       };
         
-        [sportsILike removeLastObject];
-        [sportsILike insertObject:@"swimming" atIndex:3];
+        NSArray * sportArray = [sportsILike allKeys];
         
-        for (NSString *sport in sportsILike) {
-            NSLog(@"%@",sport);
+       
+        
+        for (NSString *key in sportArray) {
+            NSLog(@"%@", sportsILike[key]);
         }
+        
         
     }
     return 0;
