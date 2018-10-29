@@ -15,7 +15,10 @@ int main(int argc, const char * argv[]) {
         [sportsILike removeLastObject];
         [sportsILike insertObject:@"swimming" atIndex:3];
         
-        NSLog(@"%@",sportsILike[1]);
+        for (NSString *sport in sportsILike) {
+            NSLog(@"%@",sport);
+        }
+        
     }
     return 0;
 }
