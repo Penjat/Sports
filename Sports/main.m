@@ -10,7 +10,10 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSArray * sportsILike = @[@"basketball", @"chess", @"star craft", @"soccer", @"tennis", @"surfing",@"kayaking"];
+        NSMutableArray * sportsILike = [[NSMutableArray alloc] initWithObjects:@"basketball", @"chess", @"star craft", @"soccer", @"tennis", @"surfing",@"kayaking", nil ];
+        
+        [sportsILike removeLastObject];
+        [sportsILike insertObject:@"swimming" atIndex:3];
         
         NSLog(@"%@",sportsILike[1]);
     }
